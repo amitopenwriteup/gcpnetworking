@@ -8,7 +8,7 @@ resource "google_compute_network" "main-vpc" {
 resource "google_compute_subnetwork" "subnet-1" {
   name          = "amit-subnet-1"                      # Name of the subnet
   ip_cidr_range = "10.0.0.0/24"                        # Subnet CIDR range
-  region        = "asia-south1"                        # Region for the subnet
+  region        = "us-east1"                        # Region for the subnet
   network       = google_compute_network.main-vpc.id   # Reference to the VPC
   description   = "Subnet 1 for Amit"
 
