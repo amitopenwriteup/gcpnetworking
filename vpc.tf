@@ -17,13 +17,13 @@ resource "google_compute_subnetwork" "subnet-1" {
 }
 resource "google_compute_router" "main-router" {
   name    = "amit-router"
-  region  = "asia-south1"
+  region  = "us-east1"
   network = google_compute_network.main-vpc.id
 }
 
 resource "google_compute_router_nat" "main-nat" {
   name   = "amit-nat"
-  region = "asia-south1"
+  region = "us-east1"
   router = google_compute_router.main-router.name
 
   nat_ip_allocate_option = "AUTO_ONLY"  # Option to automatically allocate a NAT IP
